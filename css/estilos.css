@@ -7,7 +7,7 @@
 html, body {
     margin: 0;
     padding: 0;
-	background-color: #000;
+	/* background-color: #000; */
     min-height: 100%; /* Garantiza que cubra todo el contenido */
     height: auto; /* Ajusta la altura según el contenido */
 }
@@ -16,16 +16,48 @@ body {
     font-family: 'Rubik', sans-serif;
     color: #fff;
     position: relative; /* Necesario para el pseudo-elemento */
+	background: url(https://preview.redd.it/1q7743gjlnpz.jpg?auto=webp&s=ceecb66fcdd63141c8b5f495a8633f3a092487e3) no-repeat center center fixed;
+    background-size: cover;
 }
+
+/* Contenedor principal */
+.container {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	min-height: 100vh;
+	padding: 20px;
+	gap: 20px;
+  }
+  
+  /* Estilo de la columna de texto */
+  .content {
+	flex: 1;
+	background-color: rgba(0, 0, 0, 0.8); /* Fondo negro con transparencia */
+	color: #fff;
+	padding: 20px;
+	overflow: auto;
+  }
+  
+  /* Estilo de la columna de imagen */
+  .image {
+	flex: 1;
+  }
+  
+  .image img {
+	width: 100%;
+	height: auto;
+	display: block;
+  }
 
 body::before {
     content: "";
-    position: absolute;
+    position: absolute; /* absolute*/
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-  */  background-image: url(https://preview.redd.it/1q7743gjlnpz.jpg?auto=webp&s=ceecb66fcdd63141c8b5f495a8633f3a092487e3);*/
+    background-image: url(https://preview.redd.it/1q7743gjlnpz.jpg?auto=webp&s=ceecb66fcdd63141c8b5f495a8633f3a092487e3);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
