@@ -4,104 +4,9 @@
 	box-sizing: border-box;
 }
 
-html, body {
-    margin: 0;
-    padding: 0;
-	/* background-color: #000; */
-    min-height: 100%; /* Garantiza que cubra todo el contenido */
-    height: auto; /* Ajusta la altura según el contenido */
+html{
+	scroll-behavior: smooth;
 }
-
-body {
-    font-family: 'Rubik', sans-serif;
-    color: #fff;
-    position: relative; /* Necesario para el pseudo-elemento */
-	background: url(https://preview.redd.it/1q7743gjlnpz.jpg?auto=webp&s=ceecb66fcdd63141c8b5f495a8633f3a092487e3) no-repeat center center fixed;
-    background-size: cover;
-}
-
-/* Contenedor principal */
-.container {
-	display: flex;
-	flex-direction: row;
-	align-items: flex-start;
-	min-height: 100vh;
-	padding: 20px;
-	gap: 20px;
-  }
-  
-  /* Estilo de la columna de texto */
-  .content {
-	flex: 1;
-	background-color: rgba(0, 0, 0, 0.8); /* Fondo negro con transparencia */
-	color: #fff;
-	padding: 20px;
-	overflow: auto;
-  }
-  
-  /* Estilo de la columna de imagen */
-  .image {
-	flex: 1;
-  }
-  
-  .image img {
-	width: 100%;
-	height: auto;
-	display: block;
-  }
-
-body::before {
-    content: "";
-    position: absolute; /* absolute*/
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url(https://preview.redd.it/1q7743gjlnpz.jpg?auto=webp&s=ceecb66fcdd63141c8b5f495a8633f3a092487e3);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    z-index: -1; /* Envía la imagen al fondo */
-}
-
-footer {
-   */ background-color: #000;*/
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-}
-
-/*Para no usar strong*/
-.resaltar-nombre::before {
-    content: "<"; /* Agrega un símbolo antes del nombre */
-    font-weight: bold;
-    color: red;
-}
-
-.resaltar-nombre {
-    font-weight: bold;
-    color: blue; /* Color y estilo del nombre */
-}
-
-.resaltar-nombre::after {
-    content: ">"; /* Agrega un símbolo después del nombre */
-    font-weight: bold;
-    color: red;
-}
-
-.resaltar-nombre {
-    font-weight: bold;
-    color: blue;
-    text-decoration: underline; /* Subraya el nombre */
-    transition: color 0.3s ease; /* Transición suave al cambiar de color */
-}
-
-.resaltar-nombre:hover {
-    color: green; /* Cambia el color a verde cuando el ratón pasa por encima */
-}
-
-
-
 
 header{
 	padding-top: 2%;
@@ -109,7 +14,10 @@ header{
 	padding-bottom: 2%;
 	padding-left: 7%;
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;/*justify ; /*space-between*/
+	background-color: black;
+	flex-direction: row;
+	align-items: center;
 	
 }
 nav ul {
@@ -122,6 +30,8 @@ nav ul {
   nav ul li {
 	display: inline-block;
 	margin-right: 10px;
+	
+
   }
   
   nav ul li a {
@@ -140,23 +50,195 @@ nav ul {
 	color: white;
 	transform: scale(1.1) rotate(5deg); /* Agranda y rota ligeramente el botón */
 	box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.3); /* Aumenta la sombra */
+  } 
+  
+ /*PARA QUE SE OCULTEN LOS SUBMENU*/
+
+ .menu_horizontal{
+	list-style: none;
+	display: flex;
+	justify-content: space-around;
+ }
+
+ .menu_horizontal >li >a{
+	display: block; 
+	padding: 15px 20px;
+	color: #fff;
+	text-decoration: none;
+ }
+
+ /*.menu_horizontal > li:hover{  fondo blanco detras de cada menu horizontal
+	background-color: darkred; 
+}
+
+ /* desaparecen los submenu*/
+ .menu_vertical{
+	position: absolute;
+	 display: none; 
+	 list-style: none; 
+	 width: 145px; 
+	background-color: red; 
+ }
+
+ .menu_horizontal li:hover .menu_vertical{
+	display: block;
+ }
+
+ .menu_vertical li:hover {
+	background-color: red;
+ }
+	
+ .menu_vertical li a{
+	display: block;
+	color: #fff;
+	padding: 15px 15px 15px 20px;
+	text-decoration: none;
+ }
+
+body {
+    font-family: 'Rubik', sans-serif;
+    color:white;
+	background-color: rgb(0, 0, 0);
+}
+
+/* Contenedor principal */
+.container {
+	display: flex;
+	flex-direction: row; 
+	align-items: flex-start; 
+	min-height: 100vh;
+	padding: 50px 100px;
+    column-gap: 150px;  
+	align-content: center; 
+	justify-content: space-between;
+	/* column-gap: 2px; */
+
   }
+
+  .box-1{
+	height: 100%;
+	width: 50%; 
+	/* background-color: orange; */
+  }
+
+  .box-2 {
+	height: 100%;
+	width: 50%; 
+	/* background-color: green */
+  }
+  
+  
+footer {
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+}
+
+/*Para no usar strong*/
+.resaltar-nombre::before {
+   /* content: "<"; /* Agrega un símbolo antes del nombre */
+    font-weight: bold;
+    color: red;
+}
+
+.resaltar-nombre {
+    font-weight: bold;
+    color: red; /* Color y estilo del nombre */
+}
+
+.resaltar-nombre::after {
+   /* content: ">"; /* Agrega un símbolo después del nombre */
+    font-weight: bold;
+    color: red;
+}
+
+.resaltar-nombre {
+    font-weight: bold;
+    color: red;
+    text-decoration: underline; /* Subraya el nombre */
+    transition: color 0.3s ease; /* Transición suave al cambiar de color */
+}
+
+.resaltar-nombre:hover {
+    color: green; /* Cambia el color a verde cuando el ratón pasa por encima */
+}
+
+/*Para no usar strong en los no cliqueables*/
+.resaltar-nombrerojo::before {
+	/* content: "<"; /* Agrega un símbolo antes del nombre */
+	 font-weight: bold;
+	 color: red;
+ }
+ 
+ .resaltar-nombrerojo {
+	 font-weight: bold;
+	 color: red; /* Color y estilo del nombre */
+ }
+ 
+ .resaltar-nombrerojo::after {
+	/* content: ">"; /* Agrega un símbolo después del nombre */
+	 font-weight: bold;
+	 color: red;
+ }
+ 
+ .resaltar-nombrerojo {
+	 font-weight: bold;
+	 color: red;
+	 /* text-decoration: underline; Subraya el nombre */
+	 transition: color 0.3s ease; /* Transición suave al cambiar de color */
+ }
+ 
+ .resaltar-nombrerojo:hover {
+	 color: green; /* Cambia el color a verde cuando el ratón pasa por encima */
+ }
+
+p{
+	margin: 1rem 1rem;
+	font-size: 18px;
+	/* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+	text-align:left;
+}
+
+.politica{
+	margin: 1rem 1rem;
+	font-size: 18px;
+	/* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+	text-align:center;
+
+
+}
+
+.canciones{
+	text-align: center;
+
+}
+
+ul {
+    list-style-type: none;
+	text-align: center;
+    padding: 0; /* elimina el espacio de la izquierda */
+    margin: 0; /*  ajusta el margen si es necesario */
+}
 
 a{
 	text-decoration: none;
-	color: #000000;
+	color: white;
+	text-decoration: none
+
 }
 .icon { display: none; }
+
 section{
 	max-width: 1300px;
-	width: 90%;
+	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
 }
 .principal{
 	width: 100%;
 	height: 650px;
-	background-image: url(../images/light_header.jpg);
+	background-image: url(../images/amigosenbici.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	display: flex;
@@ -165,21 +247,36 @@ section{
 	color: #ffffff;
 }
 .principal div img{
-	width: 70%;
+	width: 100%;
 }
+
+
 .secundario{
+	flex-direction: row;
 	margin-top: 5%;
 	display: flex;
+	justify-content: space-between; /*space-around;*/
+	align-content: center ;/*flex-start;*/
+	align-items: flex-start; 
+	
 }
 .secundario div{
-	width: 33%;
+	align-content: flex-start;
+	width: 100%;
 	padding: 2%;
 	text-align: center;
 }
 .secundario div a img{
 	width: 100%;
+	margin-top: auto;
 	margin-bottom: 2rem;
 }
+
+.secundario .texto {
+    text-align:left;
+	
+}
+
 h4{
 	font-size: 1.5rem;
 	text-transform: uppercase;
@@ -188,7 +285,8 @@ footer{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 350px;
+	height: 200px;
+	background-color: #000;
 }
 footer img{
 	max-width: 2.5rem;
@@ -196,22 +294,119 @@ footer img{
 	height: auto;
 	margin-right: .5%;
 }
+
+footer img {
+    margin: 0 15px ;
+}
+
+footer {
+	display: block; /* Asegura que esté en una nueva línea */
+    margin-top: 50px; /* Espacio superior */
+}
+
+/*Títulos y subtítulos*/
+
 h1{
 	text-align: center;
 	margin-top: 1.5em;
+	font-size: 30px; 
 }
 h2{
 	text-align: center;
 	margin-top: 1.5em;
 }
+ 
+h2 id {
+	scroll-margin-top: 70px ;
+}
 h3{
-	text-align: center;
+	text-align: left;
 	margin-top: 1.5em;
 }
 
+h3 id{
+	scroll-margin-top: 70px ;
+}
+
+/*Galeria*/
+.gallery-container{
+		display: flex;
+		flex-wrap: wrap;
+		background-color: #000;
+		width: 100%;
+		padding: 20px;
+		box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+		margin: 0 auto;
+	
+}
+.gallery-item {
+	flex-basis: 33%; 
+	margin: 2px;
+	opacity:0.85 ;
+	cursor: pointer;
+
+}
+.gallery-item:hover{
+	opacity: 2;
+}
+.gallery-item img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border: 6px solid white;
+	
+}
+
+/* Lightbox*/
+.lightbox {
+	position: fixed;
+	display: none;
+	background-color: rgba(0, 0, 0, 0.6);
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	top: 0;
+	left: 0;
+}
+.lightbox-content {
+	position: relative;
+	width: 65%;
+	height: 58%;
+	margin: 5% auto;
+	margin-top: 100px;
+}
+
+.lightbox-content img{
+	width: 100%;
+	height: 100%;
+	border: 6px solid #fff;
+	object-fit: cover;
+}
+ 
+.lightbox-prev,
+.lightbox-next{
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0.8);
+	color: #fff;
+	padding: 9px;
+	top: 45%;
+	cursor: pointer;
+}
+
+.lightbox-prev{
+	left: 0;
+}
+
+.lightbox-next{
+	right: 0;
+}
+
+
+
+/*Formulario*/
 .form{
 	width:100%;
-	height:440px;
+	height: 480px;
 	background:#e6e6e6;
 	border-radius:8px;
 	box-shadow:0 0 40px -10px #000;
@@ -251,7 +446,7 @@ input:focus{
 
 button{
 	padding:8px 12px;
-	margin:50px 0 0;
+	margin:50px 0px 50px;
 	border:2px solid #78788c;
 	background:0;color:#5a5a6e;
 	cursor:pointer;
@@ -264,10 +459,10 @@ button:hover{
 }
 
 div.pie_contacto{
-	position:absolute;
-	bottom:-15px;
+	position:unset; 
+	bottom: -15px;;
 	right:30%;
-	background:#50505a;
+	background:red;
 	color:#fff;
 	width:420px;
 	padding:16px 4px 16px 0;
@@ -279,16 +474,57 @@ div.pie_contacto span{
 	margin:0 5px 0 15px;
 }
 
+.gotopbtn{
+	position: fixed;
+	width: 50px;
+	height: 50px;
+	/* background: #000; */
+	bottom: 40px;
+	right: 50px;
+	text-decoration: none;
+	text-align: center;
+	line-height: 50px;
+	/* color: black; */
+	font-size: 220px;
+	border-radius: 50%;
+
+}
+.gotopbtn img{
+	position: fixed;
+	/* width: 50px; */
+	/* height: 50px; */
+	/* background: #000; */
+	/* bottom: 40px; */
+	 right: -400px;; 
+	/* text-decoration: none; */
+	/* text-align:right; */
+	/* line-height: 50px; */
+	/* color: black; */
+	/* font-size: 220px; */
+	/* border-radius: 50%; */
+
+
+}
+
 @media (max-width: 480px) { 
 header{
 	align-items: center;
 	justify-content: space-around;
 	flex-wrap: wrap;
-	background-color: #ffffff;
+	background-color: black;
 	position: sticky;
 	top: 0;
 	z-index: 1;
-}
+
+	}
+
+	.menu_horizontal{
+		display: none;
+	}
+	.menu_vertical{
+		display: none;
+	}
+
 header div, header a {
 	flex: 1 0 50%;
 }
@@ -298,11 +534,27 @@ header nav {
 .icon {
 	display: block;
 	padding-right: 0.6rem;
-	text-align: right;
+	text-align: right;	
+	top: 50px;
+	right: 10px;
+	position: absolute;
+	cursor: pointer;
+	z-index: 2;
 }
+
+
 nav ul {
 	display: none;
 }
+
+nav ul  ul {  /*esto*/
+    display: none;
+}
+/* Cuando el submenú esté abierto (clase .open se agregará con JavaScript) */
+nav ul li.open > ul {
+    display: block;
+}
+
 nav.responsive ul {
 	display: block; /*none*/
 }
@@ -314,6 +566,13 @@ nav.responsive ul li {
 nav.responsive ul li a {
 	padding-right: 0;
 }
+nav.responsive ul li ul li  { /*mio*/
+	display: none; /*none*/
+	text-align: center;
+	padding: 0.5rem;
+}
+
+
 section{
 	max-width: 480px;
 	width: 100%;
@@ -349,4 +608,74 @@ footer{
 footer img{
 	max-width: 3rem;
 }
+
+/*Galeria*/
+
+
+.gallery-item{
+	flex-basis: 100%;
+	margin-bottom: 1px;
+}
+.lightbox-content{
+	width: 90%;
+	margin: 20px auto;
+}
+
+
+/*Contenedores*/
+.container {
+	display: block;
+	margin-top: 1%;
+	width: 100%;
+  }
+
+  .box-1{
+	margin-right: auto;
+	margin-left: auto;
+	width: 100%;
+	
+ }
+  .box-1 img{
+	
+	width: 100%;       /* La imagen ocupará el 100% del ancho del contenedor */
+	max-width: 100%;   /* Limita el ancho máximo de la imagen al ancho del contenedor */
+	height: auto; 
+ }
+  .box-2 {
+	margin-right: auto;
+	margin-left: auto;
+	width: 100%;
+	margin-bottom: 1rem;
+  }
+	
+  .box-2 img{
+	
+	width: 100%;       /* La imagen ocupará el 100% del ancho del contenedor */
+	max-width: 100%;   /* Limita el ancho máximo de la imagen al ancho del contenedor */
+	height: auto; 
+}
+.gotopbtn{
+	position: fixed;
+	width: 1px;
+	height: 1px;
+	/* background: #000; */
+	bottom: 20px;
+	right: 50px;
+	text-decoration: none;
+	text-align: center;
+	line-height: 50px;
+	/* color: black; */
+	font-size: 20px;
+	border-radius: 50%;
+}
+.gotopbtn img{
+
+	position: fixed;
+	right: 5px;
+	bottom: 10px;
+}
+
+}
+
+
 }

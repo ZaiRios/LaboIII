@@ -11,29 +11,55 @@
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 <body>
+    
+    <a class="gotopbtn" href="#"> <img src ="images/up-arrow-svgrepo-com (3).png" alt="Arriba" data-title="Arriba"> </a> 
     <header>
         <div>
             <a href="index.html"><img src="images/logo.png" alt="Logo Stranger Things"></a>
         </div>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
-        <nav id="menu_bar" class="">
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="personajes.html">Personajes</a></li>
-                <li><a href="temporadas.html">Temporadas</a></li>
-                <li><a href="galeria.html">Galería</a></li>
-                <li><a href="bandasonora.html">Banda Sonora</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
+       
+            <nav id="menu_bar" class="" >
+                <ul  class="menu_horizontal" >
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="personajes.html">Personajes</a>
+            
+                      <ul class="menu_vertical">
+                        <li><a href="personajes.html#eleven">ELEVEN</a></li>
+                        <li><a href="personajes.html#Jim Hopper">JIM HOPPER</a></li>
+                        <li><a href="personajes.html#Joyce Byers">JOYCE BYERS</a></li>
+                        <li><a href="personajes.html#Mike Wheeler">MIKE WHEELER</a></li>
+                        <li><a href="personajes.html#Dustin Henderson">DUSTIN HENDERSON</a></li>
+                        <li><a href="personajes.html#Lucas Sinclair">LUCAS SINCLAIR</a></li>
+                        <li><a href="personajes.html#Will Byers">WILL BYERS</a></li>
+                        <li><a href="personajes.html#Max Mayfield">MAX MAYFIELD</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="temporadas.html">Temporadas</a>
+            
+                        <ul class="menu_vertical"> 
+                          <li><a href="temporadas.html#tempo1">Temporada 1</a></li>
+                          <li><a href="temporadas.html#tempo2">Temporada 2</a></li>
+                          <li><a href="temporadas.html#tempo3">Temporada 3</a></li>
+                          <li><a href="temporadas.html#tempo4">Temporada 4 </a></li>
+                        </ul>
+                    </li>
+                    <li><a href="galeria.html">Galería</a></li>
+                    <li><a href="bandasonora.html">Banda Sonora</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+   </nav>
+  
     </header>
     <section>
         <article class="principal">
             <div>
-                <img src="images/los_cuatro_home_logo.png" alt="Los cuatro amigos en bicicleta">
+                <img src="images/los_cuatro_home_logo.png" alt="">
             </div>
         </article>
             <h1>CONTACTO</h1>
+            <div class="container">
+                <div class="box-1">
             <article class="secundario">
                 <form class="form">
                     <h3 class="contacto">ESCRIBINOS</h3>
@@ -47,12 +73,35 @@
                     </div>
                 </form>
         </article>
+                </div>
+                <div class="box-2">
+                    <article class="secundario">
+                    <img src="images/maxcarta5x4.jpg" alt="Max leyendo una carta">
+                    </article>
+                </div>
+            </div>  
+
+
+
+
     </section>
     <footer>
-        <img src="images/redes/facebook.png" alt="Facebook">
-        <img src="images/redes/twitter.png" alt="Twitter">
-        <img src="images/redes/youtube.png" alt="Youtube">
-        <img src="images/redes/instagram.png" alt="Instagram">
+        <a href="https://www.facebook.com/strangerthingslat/?locale=es_LA" target="_blank">
+            <img src="images/redes/facebook.png" alt="Facebook">
+        </a>
+        <a href="https://x.com/stranger_things" target="_blank">
+            <img src="images/redes/twitter.png" alt="Twitter">
+        </a>
+        <a href="https://www.youtube.com/c/strangerthings" target="_blank">
+            <img src="images/redes/youtube.png" alt="Youtube">
+        </a>
+        <a href="https://www.instagram.com/strangerthingstv/?hl=es-la" target="_blank">
+            <img src="images/redes/instagram.png" alt="Instagram">
+        </a>
+
+        <article >
+            <p class="politica">Política de Privacidad | Sitio propiedad de Zaida Rios Sale | Todos los derechos reservados | © 2024 Labo III</p>
+        </article>
     </footer>
     <script type="text/javascript">
         function myFunction() {
@@ -65,5 +114,7 @@
         }
     </script>
     <script src="js/lightbox-plus-jquery.min.js"></script>
+
+    <a class="gotopbtn" href="#"> <img src ="images/up-arrow-svgrepo-com (3).png" alt="Arriba" data-title="Arriba"> </a> 
 </body>
 </html>
